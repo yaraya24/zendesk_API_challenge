@@ -18,4 +18,4 @@ SUMMARY_TICKET_ATTRIBUTES = [
 
 ]
 
-PAGINATION_SIZE = {'page[size]': 2}
+PAGINATION_SIZE = {'page[size]': 25}

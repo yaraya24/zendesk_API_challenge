@@ -15,19 +15,21 @@ class Menu:
         for index, option in enumerate(self.options, 1):
             print(f'{index} : {option}')
         selection = input(">>: ")
-        self.choose_option(selection)
+        return self.choose_option(selection)
 
     
     def choose_option(self, selection):
-        print(self.options_dict)
         try:
             chosen_selection = self.options_dict[int(selection)]
             return chosen_selection
-        except KeyError:
-            print(f"Please select an option between 1 and {len(self.options)}")
-            self.display_options()
+        except (KeyError, ValueError):
+            print(f"Please select a valid number as shown in the options")
+            return self.display_options()
+        
 
-    
+        
+
+
 
 
 

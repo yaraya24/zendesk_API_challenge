@@ -12,6 +12,7 @@ class Menu:
          
 
     def display_options(self):
+        print('\n Options:')
         for index, option in enumerate(self.options, 1):
             print(f'{index} : {option}')
         selection = input(">>: ")

@@ -36,3 +36,19 @@
 
  * Right now we using basic authentication....
  * Consider OAuth or Token Authentication?
+
+
+ ## NAVIGATION:
+
+ * Main Menu:
+        - Connect to Zendesk API
+        - ReadMe
+        - Quit
+
+
+    * ZendDesk API
+         - Requests your username, domain and password
+                     - if successful, provide list of all tickets
+                     - can select an individual ticket
+                            - if ticket selected shows the ticket, can back
+                    - can move forward and back

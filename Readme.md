@@ -17,7 +17,7 @@ A command line application that consumes the Zendesk API to retrieve and display
 1. Clone the repository into your local machine
 
 ```
-https://github.com/yaraya24/zendesk_API_challenge.git
+git clone https://github.com/yaraya24/zendesk_API_challenge.git
 ```
 
 2. Go into the project directory and create a virtual environment

@@ -25,5 +25,5 @@ class Menu:
             chosen_selection = self.options_dict[int(selection)]
             return chosen_selection
         except (KeyError, ValueError):
-            print(f"Please select a valid number as shown in the options")
+            print('\033[31m' + "Please select a valid number as shown in the options" '\033[0m')
             return self.display_options()

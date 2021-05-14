@@ -101,19 +101,23 @@ class TicketRequests(ZendeskRequest):
 
     def get_detailed_ticket_data(self, ticket_id):
         """Method that makes a request to Zendesk API with a ticket ID to get detailed information on that one ticket"""
-        ticket_search_result = super().get("search.json", {"query": ticket_id})
-        if ticket_search_result[0] == "Success":
-            detailed_ticket_result = ticket_search_result[1].json()["results"]
-            if detailed_ticket_result:
-                self.display_detailed_ticket_data(
-                    self.crop_ticket_data_to_detailed_attributes(
-                        detailed_ticket_result[0]
+
+        if ticket_id.isdigit():
+            ticket_search_result = super().get("search.json", {"query": ticket_id})
+            if ticket_search_result[0] == "Success":
+                detailed_ticket_result = ticket_search_result[1].json()["results"]
+                if detailed_ticket_result:
+                    self.display_detailed_ticket_data(
+                        self.crop_ticket_data_to_detailed_attributes(
+                            detailed_ticket_result[0]
+                        )
                     )
-                )
+                else:
+                    print("\033[31m" + "Unable to find that ticket" + "\033[0m")
             else:
-                print("Unable to find that ticket")
+                print(ticket_search_result[0])
         else:
-            print(ticket_search_result[0])
+            print("\033[31m" + "Please enter a valid id" + "\033[0m")
 
     def crop_ticket_data_to_detailed_attributes(self, detailed_ticket):
         """Method that crops the detailed ticket data to only have attributes from the detailed ticket attributes list"""

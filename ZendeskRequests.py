@@ -158,5 +158,4 @@ class TicketRequests(ZendeskRequest):
         self.params["page[before]"] = self.pagination_data["before_cursor"]
         self.get()
 
-    def get_all_data(self):
-        return self.response_data
+

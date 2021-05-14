@@ -39,11 +39,11 @@ pip install -r requirements.txt
 python main.py
 ```
 
-5. Create a .env file with the subdomain name and the OAuth token. Information on obtaining an OAuth token can be found on https://support.zendesk.com/hc/en-us/articles/203663836-Using-OAuth-authentication-with-your-application. An example .env file is provided in the repo.
+5. Create a .env file with the subdomain name and the OAuth token. Information on obtaining an OAuth token can be found on https://support.zendesk.com/hc/en-us/articles/203663836-Using-OAuth-authentication-with-your-application. An example .env file is provided in the repo. 
 
 ```
-SUBDOMAIN='your subdomain'
-TOKEN='your OAuth token '
+SUBDOMAIN=[your subdomain]
+TOKEN=[your OAuth token] 
 ```
 
 
